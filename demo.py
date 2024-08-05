@@ -8,7 +8,7 @@ with st.container():
      selected=option_menu(
             menu_title=None,
             options=['Home','objective history','current pregnancy','general medical','pregnancy follow up'],
-            #icons=['house','clock-history','activity'],
+            icons=['house','clock-history','activity'],
             menu_icon='cast',
             default_index=0,
             orientation="horizontal",
