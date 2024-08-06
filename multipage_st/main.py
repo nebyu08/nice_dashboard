@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import distribution,relationship,home
+import distribution,relationship,home,heatmap
 
 class MultiPage:
     def __init__(self) -> None:
@@ -15,7 +15,7 @@ class MultiPage:
     def run(self):
         with st.sidebar:
             app=option_menu(
-                menu_title='Pondering',
+                menu_title='Menu',
                 options=[app['title'] for app in self.apps],
                 #options=['Home','distribution','relationship'],
                 menu_icon='chat-text-fill',
@@ -41,6 +41,7 @@ app=MultiPage()
 app.add_app("Home",home.app)
 app.add_app("distribution",distribution.app)
 app.add_app("relationship",relationship.app)
+app.add_app("heatmap",heatmap.app)
 
 app.run()
 
